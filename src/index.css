@@ -1,0 +1,692 @@
+@import "tailwindcss";
+
+/* ============================================================
+   CAREERLENS — CREATIVE LIGHT THEME
+   ============================================================ */
+
+:root {
+  --cl-blue: #2563eb;
+  --cl-blue-dark: #1d4ed8;
+  --cl-purple: #7c3aed;
+  --cl-cyan: #0891b2;
+  --cl-green: #16a34a;
+  --cl-orange: #ea580c;
+  --cl-pink: #db2777;
+
+  --cl-bg: #f6f8ff;
+  --cl-surface: #ffffff;
+  --cl-text: #0f172a;
+  --cl-text-secondary: #475569;
+  --cl-text-muted: #64748b;
+  --cl-border: #e2e8f0;
+}
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(37, 99, 235, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(124, 58, 237, 0.08),
+      transparent 28%
+    ),
+    #f6f8ff;
+
+  color: var(--cl-text);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef2ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    #60a5fa,
+    #8b5cf6
+  );
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    #2563eb,
+    #7c3aed
+  );
+}
+
+/* ============================================================
+   TEXT
+   ============================================================ */
+
+.text-white {
+  color: #0f172a !important;
+}
+
+.text-slate-200 {
+  color: #1e293b !important;
+}
+
+.text-slate-300 {
+  color: #334155 !important;
+}
+
+.text-slate-400 {
+  color: #475569 !important;
+}
+
+.text-slate-500 {
+  color: #64748b !important;
+}
+
+.text-slate-600 {
+  color: #475569 !important;
+}
+
+/* ============================================================
+   BACKGROUNDS
+   ============================================================ */
+
+.bg-slate-950 {
+  background-color: #f6f8ff !important;
+}
+
+.bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+.bg-slate-800 {
+  background-color: #e2e8f0 !important;
+}
+
+/* Transparent dark backgrounds */
+
+.bg-slate-950\/90 {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(14px);
+}
+
+.bg-slate-900\/40 {
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* ============================================================
+   BORDERS
+   ============================================================ */
+
+.border-slate-800 {
+  border-color: #e2e8f0 !important;
+}
+
+.border-slate-700 {
+  border-color: #cbd5e1 !important;
+}
+
+.border-slate-600 {
+  border-color: #94a3b8 !important;
+}
+
+/* ============================================================
+   COLORFUL CARD EFFECTS
+   ============================================================ */
+
+.bg-slate-900.border {
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(37, 99, 235, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.bg-slate-900.border:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 40px rgba(37, 99, 235, 0.12),
+    0 5px 15px rgba(124, 58, 237, 0.08);
+
+  border-color: #bfdbfe !important;
+}
+
+/* ============================================================
+   BLUE ACCENTS
+   ============================================================ */
+
+.bg-blue-600 {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  ) !important;
+}
+
+.bg-blue-500 {
+  background: linear-gradient(
+    135deg,
+    #3b82f6,
+    #6366f1
+  ) !important;
+}
+
+.hover\:bg-blue-700:hover {
+  background: linear-gradient(
+    135deg,
+    #1d4ed8,
+    #4338ca
+  ) !important;
+}
+
+/* ============================================================
+   BLUE SOFT BACKGROUNDS
+   ============================================================ */
+
+.bg-blue-500\/10 {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.10),
+    rgba(99, 102, 241, 0.08)
+  ) !important;
+}
+
+.bg-blue-500\/20 {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.16),
+    rgba(124, 58, 237, 0.12)
+  ) !important;
+}
+
+/* ============================================================
+   PURPLE AI ACCENTS
+   ============================================================ */
+
+.text-purple-500,
+.text-purple-600 {
+  color: #7c3aed !important;
+}
+
+.bg-purple-500\/10 {
+  background: rgba(124, 58, 237, 0.10) !important;
+}
+
+.bg-purple-500\/20 {
+  background: rgba(124, 58, 237, 0.16) !important;
+}
+
+/* ============================================================
+   CYAN ANALYTICS ACCENTS
+   ============================================================ */
+
+.text-cyan-500,
+.text-cyan-600 {
+  color: #0891b2 !important;
+}
+
+.bg-cyan-500\/10 {
+  background: rgba(8, 145, 178, 0.10) !important;
+}
+
+.bg-cyan-500\/20 {
+  background: rgba(8, 145, 178, 0.16) !important;
+}
+
+/* ============================================================
+   GREEN SUCCESS
+   ============================================================ */
+
+.text-green-400 {
+  color: #15803d !important;
+}
+
+.text-green-500 {
+  color: #16a34a !important;
+}
+
+.bg-green-500\/10 {
+  background: rgba(22, 163, 74, 0.10) !important;
+}
+
+.bg-green-500\/20 {
+  background: rgba(22, 163, 74, 0.15) !important;
+}
+
+/* ============================================================
+   ORANGE WARNING / SKILL GAP
+   ============================================================ */
+
+.text-orange-400 {
+  color: #c2410c !important;
+}
+
+.bg-orange-500\/10 {
+  background: rgba(234, 88, 12, 0.10) !important;
+}
+
+.bg-orange-500\/20 {
+  background: rgba(234, 88, 12, 0.15) !important;
+}
+
+/* ============================================================
+   RED
+   ============================================================ */
+
+.text-red-400 {
+  color: #dc2626 !important;
+}
+
+.bg-red-500\/10 {
+  background: rgba(220, 38, 38, 0.08) !important;
+}
+
+/* ============================================================
+   HERO GLOW
+   ============================================================ */
+
+.blur-3xl {
+  filter: blur(70px);
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+input,
+select,
+textarea {
+  color: #0f172a;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* ============================================================
+   GRADIENT TEXT
+   ============================================================ */
+
+.text-blue-500 {
+  color: #2563eb !important;
+}
+
+/* ============================================================
+   SPECIAL HOVER
+   ============================================================ */
+
+.hover\:text-blue-400:hover {
+  color: #2563eb !important;
+}
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+
+::selection {
+  background: #c4b5fd;
+  color: #312e81;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   CAREERLENS — DARK MODE
+============================================================ */
+
+html.career-dark {
+  color-scheme: dark;
+}
+
+html.career-dark body {
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(37, 99, 235, 0.10),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(124, 58, 237, 0.10),
+      transparent 28%
+    ),
+    #020617 !important;
+  color: #f8fafc !important;
+}
+
+/* Backgrounds */
+html.career-dark .bg-white {
+  background-color: #0f172a !important;
+}
+
+html.career-dark .bg-slate-50 {
+  background-color: #020617 !important;
+}
+
+html.career-dark .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+html.career-dark .bg-slate-200 {
+  background-color: #334155 !important;
+}
+
+html.career-dark .bg-slate-800 {
+  background-color: #1e293b !important;
+}
+
+html.career-dark .bg-slate-900 {
+  background-color: #0f172a !important;
+}
+
+html.career-dark .bg-slate-950 {
+  background-color: #020617 !important;
+}
+
+html.career-dark .bg-slate-950\/90 {
+  background-color: rgba(2, 6, 23, 0.94) !important;
+  backdrop-filter: blur(14px);
+}
+
+html.career-dark .bg-slate-900\/40 {
+  background-color: rgba(15, 23, 42, 0.70) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Text */
+html.career-dark .text-white {
+  color: #f8fafc !important;
+}
+
+html.career-dark .text-slate-200 {
+  color: #e2e8f0 !important;
+}
+
+html.career-dark .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+html.career-dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+html.career-dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.career-dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.career-dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.career-dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.career-dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+/* Borders */
+html.career-dark .border-slate-100 {
+  border-color: #1e293b !important;
+}
+
+html.career-dark .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+html.career-dark .border-slate-300 {
+  border-color: #475569 !important;
+}
+
+html.career-dark .border-slate-600 {
+  border-color: #475569 !important;
+}
+
+html.career-dark .border-slate-700 {
+  border-color: #475569 !important;
+}
+
+html.career-dark .border-slate-800 {
+  border-color: #1e293b !important;
+}
+
+/* Inputs */
+html.career-dark input,
+html.career-dark select,
+html.career-dark textarea {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+html.career-dark input::placeholder,
+html.career-dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+html.career-dark option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Hover states */
+html.career-dark .hover\:bg-slate-50:hover {
+  background-color: #1e293b !important;
+}
+
+html.career-dark .hover\:bg-slate-100:hover {
+  background-color: #334155 !important;
+}
+
+html.career-dark .hover\:text-blue-400:hover {
+  color: #60a5fa !important;
+}
+
+/* Cards */
+html.career-dark .bg-slate-900.border {
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(37, 99, 235, 0.05);
+}
+
+html.career-dark .bg-slate-900.border:hover {
+  border-color: #3b82f6 !important;
+}
+
+/* Accent colors */
+html.career-dark .text-blue-500 {
+  color: #60a5fa !important;
+}
+
+html.career-dark .text-purple-500,
+html.career-dark .text-purple-600 {
+  color: #a78bfa !important;
+}
+
+html.career-dark .text-cyan-500,
+html.career-dark .text-cyan-600 {
+  color: #22d3ee !important;
+}
+
+html.career-dark .text-green-400 {
+  color: #4ade80 !important;
+}
+
+html.career-dark .text-green-500 {
+  color: #22c55e !important;
+}
+
+html.career-dark .text-orange-400 {
+  color: #fb923c !important;
+}
+
+html.career-dark .text-red-400 {
+  color: #f87171 !important;
+}
+
+/* Scrollbar */
+html.career-dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+html.career-dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(#3b82f6, #7c3aed);
+}
+
+/* Theme toggle */
+html.career-dark .fixed.bottom-6.right-6 {
+  background-color: #1e293b !important;
+  color: #fde047 !important;
+  border-color: #475569 !important;
+}
+
+/* Smooth theme transition */
+html,
+body,
+body * {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* ============================================================
+   THEME CONSISTENCY FIXES — INNER PAGE HEADER + HOME SHORTCUT
+   ============================================================ */
+
+/* Light theme: a clear, readable Home shortcut */
+.cl-home-shortcut {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.14) !important;
+}
+
+.cl-home-shortcut:hover {
+  background: #eff6ff !important;
+  border-color: #93c5fd !important;
+  color: #1d4ed8 !important;
+}
+
+/* Dark theme: keep the header and its text consistent with the page */
+html.career-dark .bg-white\/95 {
+  background-color: rgba(15, 23, 42, 0.96) !important;
+  backdrop-filter: blur(14px);
+}
+
+html.career-dark .cl-home-shortcut {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border: 1px solid #475569 !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35) !important;
+}
+
+html.career-dark .cl-home-shortcut:hover {
+  background: #334155 !important;
+  border-color: #60a5fa !important;
+  color: #ffffff !important;
+}
+
+html.career-dark header.bg-white,
+html.career-dark header.bg-white\/95 {
+  background-color: rgba(15, 23, 42, 0.96) !important;
+  border-color: #334155 !important;
+}
+
+html.career-dark header.bg-white h1,
+html.career-dark header.bg-white\/95 h1,
+html.career-dark header.bg-white p,
+html.career-dark header.bg-white\/95 p {
+  color: #f8fafc !important;
+}
+
+html.career-dark header.bg-white button:not(.bg-blue-600),
+html.career-dark header.bg-white\/95 button:not(.bg-blue-600) {
+  color: #cbd5e1 !important;
+}

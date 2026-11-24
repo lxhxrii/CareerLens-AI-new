@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+server/node_modules/
+
+# Environment variables
+.env
+server/.env
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Local environment
+.env.local
+.env.*.local
